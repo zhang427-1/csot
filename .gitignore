@@ -1,0 +1,94 @@
+# ============================================================
+# .gitignore — 论文文献仓库
+# 策略: 只追踪 Python(.py) + Julia(.jl) + Jupyter(.ipynb) 源码
+#       屏蔽 PDF 论文、图片、二进制数据、编译产物
+# ============================================================
+
+# ===== 论文 & 演示文稿 =====
+*.pdf
+*.pptx
+*.ppt
+*.doc
+*.docx
+
+# ===== 图片（测试用图、论文插图、截图）=====
+*.png
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.gif
+*.bmp
+*.svg
+*.tiff
+*.tif
+*.webp
+*.ico
+
+# ===== Python 编译产物 =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# ===== Julia 编译/缓存 =====
+*.ji
+*.so
+*.dll
+*.dylib
+Manifest.toml
+
+# ===== Jupyter 检查点（自动保存垃圾）=====
+.ipynb_checkpoints/
+*.checkpoint.ipynb
+
+# ===== 数据 & 二进制 =====
+*.jld2
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.mat
+*.db
+*.sqlite
+*.sample
+
+# ===== 系统 & 编辑器 =====
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# ===== 压缩包 =====
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ===== 日志 & 临时 =====
+*.log
+*.tmp
+*.temp
+*.cache
+
+# ===== 环境/依赖（如需可取消注释）=====
+# 通常 .toml 依赖 Manifest.toml 不追踪，Project.toml 要追踪
+# *.toml 已注释 — Project.toml 会正常追踪
+# 若用 Conda/Poetry:
+# .conda/
+# poetry.lock
+# Pipfile.lock
+
+# ===== 例外：明确保留的文件类型 =====
+# 不需写 — .gitignore 默认不忽略已追踪文件
+# .py / .jl / .ipynb / Project.toml 会自动被追踪
